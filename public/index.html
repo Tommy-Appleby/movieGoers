@@ -1,167 +1,423 @@
 <!DOCTYPE html>
 <html>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <style>
-    .dropbtn {
-      background-color: #4CAF50;
-      color: white;
-      padding: 16px;
-      font-size: 16px;
-      border: none;
-    }
-    h1{
-      text-align:right;
-      font-size: 100px;
-      color: blue;
-    }
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<style>
+
+		h3{
+			text-align:center;
+			font-size: 60px;
+			color: blue;
+			border: 1px solid black;
+		}
+	
+		h4{
+			text-align:center;
+			font-size: 20px;
+			color: indigo;
+			border-top: 1px solid black;
+			border-bottom: 1px solid black;
+		}
+	
+		h4:hover {background-color: #3e8e41;}
+	
+		h5{
+			text-align:center;
+			font-size: 15px;
+			color: indigo;
+			border-bottom: 1px solid black;
+		}
+	
+		.navbar {
+		
+			background-color: #333;
+			margin: 0;
+			padding:0;
+			width: 100%;
+			font-size: 24 px;
+		}
+	
+		.navbar a {		
+			padding:5px;
+			float: left;
+			font-size: 16px;
+			color: white;
+			text-align: center;
+			padding: 14px 16px;
+			text-decoration: none;
+		}
+	
+		.navbar a:hover {background-color: #3e8e41;}
+	
+		.dropdown {
+			position: relative;
+			display: inline-block;
+		}
     
-    .dropdown {
-      position: relative;
-      display: inline-block;
-    }
+		.dropbtn {
+			background-color: #333;
+			color: white;
+			padding: 14px 16px;
+			font-size: 16px;
+			border: none;
+		}
+	
+		.dropdown-content {
+			display: none;
+			position: absolute;
+			background-color: white;
+			min-width: 100px;
+			box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+			z-index: 1;
+		}
     
-    .dropdown-content {
-      display: none;
-      position: absolute;
-      background-color: #f1f1f1;
-      min-width: 100px;
-      box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-      z-index: 1;
-    }
+		.dropdown-content a {
+			color: black;
+			padding: 12px 16px;
+			text-decoration: none;
+			display: block;
+		}
     
-    .dropdown-content a {
-      color: black;
-      padding: 12px 16px;
-      text-decoration: none;
-      display: block;
-    }
+		.dropdown-content a:hover {background-color: #ddd;}
     
-    .dropdown-content a:hover {background-color: #ddd;}
+		.dropdown:hover .dropdown-content {display: block;}
     
-    .dropdown:hover .dropdown-content {display: block;}
+		.dropdown:hover .dropbtn {background-color: #3e8e41;}
+	
+	
+		table {
+			width:100%;
+		}
+
+		table, th, td {
+			border: 1px solid black;
+			border-collapse: collapse;
+		}
+		
+		th, td {
+			padding: 5px;
+			text-align: left;
+		}
+		
+		#t01 tr:nth-child(even) {
+			background-color: #eee;
+		}
+		
+		#t01 tr:nth-child(odd) {
+			background-color: #fff;
+		}
+		
+		#t01 th {
+			background-color: black;
+			color: white;
+		}
+
+		.mySlides {
+			display:none;
+			margin-left: auto;
+			margin-right: auto;
+			height: 300px;
+			width:  200px;
+			border-radius: 8px;
+		}
+
+		img {
+			vertical-align: middle;
+			border-radius: 8px;
+		}
+
+		.fade {
+			-webkit-animation-name: fade;
+			-webkit-animation-duration: 1.5s;
+			animation-name: fade;
+			animation-duration: 1.5s;
+		}
+
+		@-webkit-keyframes fade {
+			from {
+				opacity: .4
+			}
+			to {
+				opacity: 1
+			}
+		}
+
+		@keyframes fade {
+			from {
+				opacity: .4
+			}
+			to {
+				opacity: 1
+			}
+		}	
+	
+		.slideshow-container {
+			max-width: 320px;
+			position: relative;
+			margin: auto;
+		}
+		
+		.tab{
+			border-top: 5px solid navy;
+			display: flex;
+		}
+	
+		.movies{
+			border: 3px solid black;
+		}
     
-    .dropdown:hover .dropbtn {background-color: #3e8e41;}
     </style>
-  <style>
-    body {
-        background:url(homeBackground.jpg);
-        background-position: right top;
-        background-repeat: no-repeat;
-        margin-top: 65px;
-        margin-left: 20px;
-    }
+	
+	<style>
+		body {
+			background:url(homeBackground.jpg);
+			background-position: center;
+			background-repeat: no-repeat;
+			background-size: cover;
+		
+		}
     
-</style>
+	</style>
 
-<div class="dropdown">
-  <button class="dropbtn">NavBar</button>
-  <div class="dropdown-content">
-    <a href="index.html">Homepage</a>
-    <a href="About.html"">About Us</a>
-    <a href="createAnEvent.html">Create-Movie-Review</a>
-    <a href="login.html">Login</a>
+
+	<div class="navbar">
+
+		<div class="dropdown">
+			<button class="dropbtn">NavBar</button>
+			<div class="dropdown-content">
+				<a href="index.html">Homepage</a>
+				<a href="About.html"">About Us</a>
+				<a href="createAnEvent.html">Create-Movie-Review</a>
+				<a href="login.html">Login</a>
+			</div>
+		</div>
+	
+		<a href="index.html">Homepage</a>
+		<a href="About.html"">About Us</a>
+		<a href="createAnEvent.html">Create-Movie-Review</a>
+		<a href="login.html">Login</a>
+	</div>
+
+
+
+	<h3 style="text-align:center"><b>MovieGoers</b></h3>
+	
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>Welcome to Firebase Hosting</title>
     
-  </div>
-</div>
-<h1 style="text-align:center"><b>MovieGoers</b></h1>
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Welcome to Firebase Hosting</title>
     
-    <body>
+	<body>
       
+		<div class="tab" style="width: 100%;">
+			<div class="movies" style= "float: left; width: 33%; border: 3px solid black; border-top:none;">
+		
+				<h4 style="text-align:center"><b>In Theatres</b></h4>
+			
+				<div class="slideshow-container" data-cycle="3000">
 
+					<div class="mySlides fade" style= " border: 3px solid black;" >
+						<img width="200" height="300" src="mVm.png">					
+					</div>
+
+					<div class="mySlides fade" style= " border: 3px solid black;">					
+						<img width="200" height="300"  src="mk.jpg">					
+					</div>
+
+					<div class="mySlides fade" style= " border: 3px solid black;">					
+						<img width="200" height="300" src="tenet.jpg">					
+					</div>
+
+				</div>		
+			</div>
+		
+			<div class ="movies" style= "float: left; width: 33%; border: 3px solid black; border-top:none;">
+				<h4 style="text-align:center"><b>Box office</b></h4>
+				<h5 style="text-align:center" ><b>Top 5 movies</b></h5>
+
+
+				<table id="t01">
+					<tr>
+						<th>Movie</th>
+						<th>Weekend</th> 
+						<th>Gross</th>
+					</tr>
+  
+					<tr>
+						<td>Demon Slayer</td>
+						<td>$6.4M</td>
+						<td>$34.1M</td>
+					</tr>
+					
+					<tr>
+						<td>Mortal Kombat</td>
+						<td>$6.2M</td>
+						<td>$34.1M</td>
+					</tr>
+  
+					<tr>
+						<td>Godzilla vs. Kong</td>
+						<td>$2.8M</td>
+						<td>$90.4M</td>
+					</tr>
+    
+					<tr>
+						<td>Separation</td>
+						<td>$1.8M</td>
+						<td>$1.8M</td>
+					</tr>
+
+					<tr>
+						<td>Raya and the Last Dragon</td>
+						<td>$1.4M</td>
+						<td>$41.6M</td>
+					</tr>
+				</table>
+		
+			</div>
+		
+			<div style= "float: left; width: 33%; border: 3px solid black; border-top:none;" class="movies"> 
+				<h4 style="text-align:center"><b>Upcoming</b></h4>
+			
+				<div class="slideshow-container" data-cycle="3000">
+
+					<div class="mySlides fade" style= " border: 3px solid black;">
+						<img width="200" height="300" src="cr.jpg">
+					</div>
+
+					<div class="mySlides fade" style= " border: 3px solid black;">
+						<img width="200" height="300" src="aotd.jpg">
+					</div>
+
+					<div class="mySlides fade" style= " border: 3px solid black;">
+						<img width="200" height="300" src="qp2.jpg">
+					</div>
+
+				</div>
+			
+			</div>
+		</div>
+
+
+		<script>
+			
+			var slideshowContainers = document.getElementsByClassName("slideshow-container");
+			
+			for(let s = 0; s < slideshowContainers.length; s++) {
+						
+				var cycle = slideshowContainers[s].dataset.cycle;
+				
+				var slides = slideshowContainers[s].querySelectorAll('.mySlides');
+				var slideIndex = 0;
+				
+				showSlides(slides, slideIndex, cycle);
+			};
+
+			function showSlides(slides, slideIndex, cycle) {
+				for (i = 0; i < slides.length; i++) {
+					slides[i].style.display = "none";
+				};
+				slideIndex++;
+				if (slideIndex > slides.length) {
+					slideIndex = 1
+				};
+				slides[slideIndex - 1].style.display = "block";
+				
+				setTimeout(function() {
+					showSlides(slides, slideIndex, cycle)
+				}, cycle);
+			};
+		</script>
 
       
-      <!-- The core Firebase JS SDK is always required and must be listed first -->
-<script src="/__/firebase/8.2.10/firebase-app.js"></script>
+		<!-- The core Firebase JS SDK is always required and must be listed first -->
+		<script src="/__/firebase/8.2.10/firebase-app.js"></script>
 
-<!-- TODO: Add SDKs for Firebase products that you want to use
-     https://firebase.google.com/docs/web/setup#available-libraries -->
-<script src="/__/firebase/8.2.10/firebase-analytics.js"></script>
+		<!-- TODO: Add SDKs for Firebase products that you want to use
+		https://firebase.google.com/docs/web/setup#available-libraries -->
+		<script src="/__/firebase/8.2.10/firebase-analytics.js"></script>
 
-<!-- Initialize Firebase -->
-<script src="/__/firebase/init.js"></script>
-    <!-- update the version number as needed -->
-    <script defer src="/__/firebase/8.2.7/firebase-app.js"></script>
-    <!-- include only the Firebase features as you need -->
-    <script defer src="/__/firebase/8.2.7/firebase-auth.js"></script>
-    <script defer src="/__/firebase/8.2.7/firebase-database.js"></script>
-    <script defer src="/__/firebase/8.2.7/firebase-firestore.js"></script>
-    <script defer src="/__/firebase/8.2.7/firebase-functions.js"></script>
-    <script defer src="/__/firebase/8.2.7/firebase-messaging.js"></script>
-    <script defer src="/__/firebase/8.2.7/firebase-storage.js"></script>
-    <script defer src="/__/firebase/8.2.7/firebase-analytics.js"></script>
-    <script defer src="/__/firebase/8.2.7/firebase-remote-config.js"></script>
-    <script defer src="/__/firebase/8.2.7/firebase-performance.js"></script>
-    <!-- 
-      initialize the SDK after all desired features are loaded, set useEmulator to false
-      to avoid connecting the SDK to running emulators.
-    -->
-    <script defer src="/__/firebase/init.js?useEmulator=true"></script>
-    <!--<div id="modal-signup" class="modal">
-      <div class="modal-content">
-        <h4>Sign up</h4><br />
-        <form id="signup-form">
-          <div class="input-field">
-            <input type="email" id="signup-email" required />
-            <label for="signup-email">Email address</label>
-          </div>
-          <div class="input-field">
-            <input type="password" id="signup-password" required />
-            <label for="signup-password">Choose password</label>
-          </div>
-          <button class="btn light-teal darken-2 z-depth-0">Sign up</button>
-        </form>
-      </div>
-    </div> -->
+		<!-- Initialize Firebase -->
+		<script src="/__/firebase/init.js"></script>
+		<!-- update the version number as needed -->
+		<script defer src="/__/firebase/8.2.7/firebase-app.js"></script>
+		<!-- include only the Firebase features as you need -->
+		<script defer src="/__/firebase/8.2.7/firebase-auth.js"></script>
+		<script defer src="/__/firebase/8.2.7/firebase-database.js"></script>
+		<script defer src="/__/firebase/8.2.7/firebase-firestore.js"></script>
+		<script defer src="/__/firebase/8.2.7/firebase-functions.js"></script>
+		<script defer src="/__/firebase/8.2.7/firebase-messaging.js"></script>
+		<script defer src="/__/firebase/8.2.7/firebase-storage.js"></script>
+		<script defer src="/__/firebase/8.2.7/firebase-analytics.js"></script>
+		<script defer src="/__/firebase/8.2.7/firebase-remote-config.js"></script>
+		<script defer src="/__/firebase/8.2.7/firebase-performance.js"></script>
+		<!-- 
+		  initialize the SDK after all desired features are loaded, set useEmulator to false
+		  to avoid connecting the SDK to running emulators.
+		-->
+		<script defer src="/__/firebase/init.js?useEmulator=true"></script>
+		<!--<div id="modal-signup" class="modal">
+		  <div class="modal-content">
+			<h4>Sign up</h4><br />
+			<form id="signup-form">
+			  <div class="input-field">
+				<input type="email" id="signup-email" required />
+				<label for="signup-email">Email address</label>
+			  </div>
+			  <div class="input-field">
+				<input type="password" id="signup-password" required />
+				<label for="signup-password">Choose password</label>
+			  </div>
+			  <button class="btn light-teal darken-2 z-depth-0">Sign up</button>
+			</form>
+		  </div>
+		</div> -->
 
-    
+		
 
-    
-    <p id="load">Firebase SDK Loading&hellip;</p>
+		
+		<p id="load">Firebase SDK Loading&hellip;</p>
 
-    <script>
-      document.addEventListener('DOMContentLoaded', function() {
-        const loadEl = document.querySelector('#load');
-        // // 🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥
-        // // The Firebase SDK is initialized and available here!
-        //
-        // firebase.auth().onAuthStateChanged(user => { });
-        // firebase.database().ref('/path/to/ref').on('value', snapshot => { });
-        // firebase.firestore().doc('/foo/bar').get().then(() => { });
-        // firebase.functions().httpsCallable('yourFunction')().then(() => { });
-        // firebase.messaging().requestPermission().then(() => { });
-        // firebase.storage().ref('/path/to/ref').getDownloadURL().then(() => { });
-        // firebase.analytics(); // call to activate
-        // firebase.analytics().logEvent('tutorial_completed');
-        // firebase.performance(); // call to activate
-        //
-        // // 🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥
+		<script>
+		  document.addEventListener('DOMContentLoaded', function() {
+			const loadEl = document.querySelector('#load');
+			// // 🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥
+			// // The Firebase SDK is initialized and available here!
+			//
+			// firebase.auth().onAuthStateChanged(user => { });
+			// firebase.database().ref('/path/to/ref').on('value', snapshot => { });
+			// firebase.firestore().doc('/foo/bar').get().then(() => { });
+			// firebase.functions().httpsCallable('yourFunction')().then(() => { });
+			// firebase.messaging().requestPermission().then(() => { });
+			// firebase.storage().ref('/path/to/ref').getDownloadURL().then(() => { });
+			// firebase.analytics(); // call to activate
+			// firebase.analytics().logEvent('tutorial_completed');
+			// firebase.performance(); // call to activate
+			//
+			// // 🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥
 
-        try {
-          let app = firebase.app();
-          let features = [
-            
-          ].filter(feature => typeof app[feature] === 'function');
-          loadEl.textContent = `Created by Marquette Univeristy Students ${features.join(', ')}`;
-        } catch (e) {
-          console.error(e);
-          loadEl.textContent = 'Error loading the Firebase SDK, check the console.';
-        }
-      });
-    </script>
-    <!-- 
-  if(login==0)
-  {
-    document.getElementById("loginout").style.visibility = "hidden";
-  }
-  else 
-  {
-    document.getElementById("login").style.visibility = "hidden";
-  }
-    </script> -->
+			try {
+			  let app = firebase.app();
+			  let features = [
+				
+			  ].filter(feature => typeof app[feature] === 'function');
+			  loadEl.textContent = `Created by Marquette Univeristy Students ${features.join(', ')}`;
+			} catch (e) {
+			  console.error(e);
+			  loadEl.textContent = 'Error loading the Firebase SDK, check the console.';
+			}
+		  });
+		</script>
+		<!-- 
+		if(login==0)
+		{
+			document.getElementById("loginout").style.visibility = "hidden";
+		}
+		else 
+		{
+			document.getElementById("login").style.visibility = "hidden";
+		}
+		</script> -->
    
   </body>
 </html>
