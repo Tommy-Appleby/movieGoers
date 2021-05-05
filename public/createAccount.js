@@ -17,7 +17,7 @@
 	const txtPasswordConfirm = document.getElementById("reEnterPassword");
 	const btnCreateAccount = document.getElementById("createAccount");
 	
-	const txtAccountUserName = document.getElementById("accountUsername");
+	const txtuserName = document.getElementById("username");
 	
 	//signup event
 	btnCreateAccount.addEventListener('click', e => {
@@ -42,7 +42,7 @@
 			console.log(firebaseUser.uid);
 			// Add a new document in collection "users"
 			firebase.firestore().collection("users").doc(firebaseUser.uid).set({
-				username: txtAccountUserName.value,
+				username: txtuserName.value,
 			})
 			.then(() => {
 				console.log("Document successfully written!");
