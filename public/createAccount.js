@@ -19,10 +19,6 @@
 	const btnCreateAccount = document.getElementById("createAccount");
 	
 	const txtAccountUserName = document.getElementById("username");
-    console.log(document.getElementById("email"));
-    console.log(txtPassword);
-    console.log(txtPasswordConfirm);
-    console.log(txtAccountUserName);
 	//signup event
 	btnCreateAccount.addEventListener('click', e => {
 		//get email and password
