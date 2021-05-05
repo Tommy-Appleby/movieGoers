@@ -1,74 +1,126 @@
 <!DOCTYPE html>
 <html>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <head>
+      <meta charset="utf-8">
+      <title>Create an Account</title>
+      <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+      <!--<link rel="stylesheet" href="createAnAccount.css"> won't be needing this anymore-->
+        <!--Bring in new styling sheets-->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+        <!-- jQuery library -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <!-- Latest compiled JavaScript -->
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 
-<style>
-.dropbtn {
-  background-color: #4CAF50;
-  color: white;
-  padding: 16px;
-  font-size: 16px;
-  border: none;
-}
+        <style>
+          html{
+              width: 100%;
+              background-color: darkgray;
+          }
+          body {
+			        background:url(homeBackground.jpg);
+			        background-position: center;
+			        background-repeat: no-repeat;
+			        background-size: cover;
+		      }
+          .navbar {
+              margin-bottom: 0;
+          }
+          .navbar {
+		
+          background-color: #333;
+          margin: 0;
+          padding:0;
+          width: 100%;
+          font-size: 24 px;
+          }
 
-.dropdown {
-  position: relative;
-  display: inline-block;
-}
+          .navbar a {		
+          padding:5px;
+          float: left;
+          font-size: 16px;
+          color: white;
+          text-align: center;
+          padding: 14px 16px;
+          text-decoration: none;
+          }
 
-.dropdown-content {
-  display: none;
-  position: absolute;
-  background-color: #f1f1f1;
-  min-width: 160px;
-  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-  z-index: 1;
-}
+  .navbar a:hover {background-color: #3e8e41;}
 
-.dropdown-content a {
-  color: black;
-  padding: 12px 16px;
-  text-decoration: none;
-  display: block;
-}
+          .sidenav{
+              height: 100%;
+          }
+          .row.content{
+              height: 100vh;
+              padding-top: 50px;
+          }
+        </style>
+  </head>
 
-.dropdown-content a:hover {background-color: #ddd;}
+  <body style="background-color: white;">
 
-.dropdown:hover .dropdown-content {display: block;}
 
-.dropdown:hover .dropbtn {background-color: #3e8e41;}
-</style>
-<body>
-<div>
-    <div>
-      <h4>Sign up</h4><br />
-      <form id="signup">
-        <div>
-          <label for="username">Username:</label>
-        <input type="text" id="username" placeholder="Enter username">
+    <!--Navbar creation-->
+
+    
+    <div class="navbar">
+
+		<div class="dropdown">
+			<div class="dropdown-content">
+				<a href="index.html">Homepage</a>
+				<a href="About.html">About Us</a>
+				<a href="createAnEvent.html">Create-Movie-Review</a>
+				<a href="login.html">Login</a>
+			</div>
+		</div>
+	</div>
+    
+    <!--Create the form and page-->
+    <div class="container-fluid text-center">
+        <div class="row content">
+            <div class="col-sm-2 sidenav"> </div>
+            <div class="col-sm-8 well well-sm" style="margin-top: 100px;"> <!--form will go in here-->
+                <h2>Sign Up</h2>
+                <!--<form class="form-horizontal" action="/action_page.php" style="width: 90%;">--><p style="width: 90%;">
+                    <div class="form-group">
+                        <label class="control-label col-sm-3" for="userName">Username:</label>
+                        <div class="col-sm-9">
+                            <input type="text" class="form-control" id="username" name="username">
+                        </div>
+                    </div>
+                  <div class="form-group">
+                    <label class="control-label col-sm-3" for="email">Email:</label>
+                    <div class="col-sm-9">
+                      <input type="email" class="form-control" id="email" name="email">
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <label class="control-label col-sm-3" for="password">Password:</label>
+                    <div class="col-sm-9">          
+                      <input type="password" class="form-control" id="password" name="password">
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <label class="control-label col-sm-3" for="reEnterPassword">Re-Enter Password:</label>
+                    <div class="col-sm-9">          
+                      <input type="password" class="form-control" id="reEnterPassword" name="reEnterPassword">
+                    </div>
+                  </div>
+                  <!--Add drop down bar with selection for type of account, here and the create account button both aren't properly aligned for now though-->
+                  <div class="form-group">        
+                      <button type="submit" class="btn btn-default" id="createAccount" value="createAccount" style="background-color: black; cursor: pointer; color: white">Create Account</button>
+                  </div>
+                <!--</form>--></p>
+            </div>
+            <div class="col-sm-2 sidenav">
+
+            </div>
         </div>
-        <div>
-          <label for="email">Email address:</label>
-          <input type="email" id="email" placeholder="Enter Email">
-        </div>
-        <div>
-          <label for="password">Password:</label>
-          <input type="password" id="password" placeholder="Enter Password">
-        </div>
-        <div>
-          <label for="reEnterPassword">Re-enter password:</label>
-          <input type="password" id="reEnterPassword" placeholder="Re-enter Password">
-        </div>
-        <button type = "submit" id = "createAccount" class = "button">Sign up</button>
-      </form>
     </div>
-  </div>
-
-
-  <script src="https://www.gstatic.com/firebasejs/8.3.0/firebase-app.js"></script>
-  <script src="https://www.gstatic.com/firebasejs/8.3.0/firebase-auth.js"></script>
-  <script src="https://www.gstatic.com/firebasejs/8.3.0/firebase-firestore.js"></script>
-  <script src="createAccount.js"></script>
-  </body>
-</html>
+        <script src="https://www.gstatic.com/firebasejs/8.3.0/firebase-app.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/8.3.0/firebase-auth.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/8.3.0/firebase-firestore.js"></script>
+        <script src="createAccount.js"></script>
+    <!--Footer if wanted-->
+    </body>
+    </html>

@@ -1,16 +1,15 @@
 (function() {
-	console.log("loaded createAcct script");
-    const firebaseConfig = {
-        apiKey: "AIzaSyAHfnQHxx_PEsWW-9BWFOxMD7r9KzdRCYw",
-        authDomain: "fir-proj-73e59.firebaseapp.com",
-        databaseURL: "https://fir-proj-73e59-default-rtdb.firebaseio.com",
-        projectId: "fir-proj-73e59",
-        storageBucket: "fir-proj-73e59.appspot.com",
-        messagingSenderId: "286772816543",
-        appId: "1:286772816543:web:6eb884a40f6b91411cd0aa",
-        measurementId: "G-YM5KVJ94P7"
-      };
-      
+	const firebaseConfig = {
+		apiKey: "AIzaSyAHfnQHxx_PEsWW-9BWFOxMD7r9KzdRCYw",
+		authDomain: "fir-proj-73e59.firebaseapp.com",
+		databaseURL: "https://fir-proj-73e59-default-rtdb.firebaseio.com",
+		projectId: "fir-proj-73e59",
+		storageBucket: "fir-proj-73e59.appspot.com",
+		messagingSenderId: "286772816543",
+		appId: "1:286772816543:web:6eb884a40f6b91411cd0aa",
+		measurementId: "G-YM5KVJ94P7"
+	  };
+		
 	firebase.initializeApp(firebaseConfig);
 	//get elements
 	const txtEmail = document.getElementById("email");
@@ -18,7 +17,8 @@
 	const txtPasswordConfirm = document.getElementById("reEnterPassword");
 	const btnCreateAccount = document.getElementById("createAccount");
 	
-	const txtAccountUserName = document.getElementById("username");
+	const txtAccountUserName = document.getElementById("accountUsername");
+	
 	//signup event
 	btnCreateAccount.addEventListener('click', e => {
 		//get email and password

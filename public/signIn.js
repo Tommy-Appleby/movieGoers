@@ -12,14 +12,14 @@
 		
 	firebase.initializeApp(firebaseConfig);
 	//get elements
-	const signIn = document.getElementById("signIn");
-	const forgotPasswordBtn = document.getElementById("forgotPassword");
+	const login = document.getElementById("login");
+	//const forgotPasswordBtn = document.getElementById("forgotPassword");
 	//const dontHaveAnAccountSignUp = document.getElementById("dontHaveAnAccountSignUp");
 	const txtEmail = document.getElementById("email");
 	const txtPassword = document.getElementById("password");
 	
-	//signIn event
-	signIn.addEventListener('click', e => {
+	//signup event
+	login.addEventListener('click', e => {
 		//get email and password
 		const email = txtEmail.value;
 		const pass = txtPassword.value;
@@ -34,7 +34,7 @@
 		promise.catch(e => alert(e.message));
 	});
 
-	//forgot password event
+	/*//forgot password event
 	forgotPasswordBtn.addEventListener('click', e => {
 		//get email and password
 		if(email.value == ""){
@@ -47,7 +47,7 @@
 		promise.catch(e => console.log(e.message));
 		alert("Check your email to reset your password.");
 		}
-	});
+	});*/
 	
 	/*dontHaveAnAccountSignUp.addEventListener('click', e => {
 		window.location.href = "createAnAccount.html";
