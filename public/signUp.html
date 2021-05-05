@@ -2,7 +2,11 @@
 <html>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
- 
+ <!-- jQuery library -->
+ <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+ <!-- Latest compiled JavaScript -->
+ <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
 <style>
 .dropbtn {
   background-color: #4CAF50;
@@ -46,21 +50,21 @@
       <form id="signup">
         <div>
           <label for="username">Username:</label>
-        <input type="text" id="username" placeholder="Enter username" name = "username" >
+        <input type="text" id="username" placeholder="Enter username">
         </div>
         <div>
           <label for="email">Email address:</label>
-          <input type="email" id="email" placeholder="Enter Email" name = "email">
+          <input type="email" id="email" placeholder="Enter Email">
         </div>
         <div>
           <label for="password">Password:</label>
-          <input type="password" id="password" placeholder="Enter Password" name = "password">
+          <input type="password" id="password" placeholder="Enter Password">
         </div>
         <div>
           <label for="reEnterPassword">Re-enter password:</label>
-          <input type="password" id="reEnterPassword" placeholder="Re-enter Password" name = "reEnterPassword">
+          <input type="password" id="reEnterPassword" placeholder="Re-enter Password">
         </div>
-        <button type = "submit" id = "createAccount" value = "createAccount">Sign up</button>
+        <button type = "submit" id = "createAccount" class = "button">Sign up</button>
       </form>
     </div>
   </div>
