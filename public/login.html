@@ -2,10 +2,6 @@
 <html>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-   <!-- jQuery library -->
-   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-   <!-- Latest compiled JavaScript -->
-   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 
 <style>
 .dropbtn {
@@ -44,20 +40,20 @@
 .dropdown:hover .dropbtn {background-color: #3e8e41;}
 </style>
   <!-- LOGIN MODAL -->
-  <div id="modal-login" class="modal">
-    <div class="modal-content">
+  <div>
+    <div>
       <h4>Login</h4><br />
-      <form id="login-form">
-        <div class="input-field">
+      <form id="login">
+        <div>
           <label for="email">Email address</label>
           <input type="email" id="email" name = "email">
         </div>
-        <div class="input-field">
+        <div>
           <label for="login-password">Your password</label>
           <input type="password" id="password" name = "password">
         </div>
-        <button class = "btn btn-default" id="forgotPassword">Forgot password</button> <br><br>
-        <button type = "submit" class="btn light-teal darken-2 z-depth-0" id = "signIn" value = "signIn">Login</button>
+        <button id="forgotPassword">Forgot password</button> <br><br>
+        <button type = "submit" id = "signIn" value = "signIn">Login</button>
       </form>
     </div>
   </div>

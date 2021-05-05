@@ -2,10 +2,7 @@
 <html>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <!-- jQuery library -->
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-  <!-- Latest compiled JavaScript -->
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+ 
 <style>
 .dropbtn {
   background-color: #4CAF50;
@@ -43,27 +40,27 @@
 .dropdown:hover .dropbtn {background-color: #3e8e41;}
 </style>
 <body>
-<div id="modal-signup" class="modal">
-    <div class="modal-content">
+<div>
+    <div>
       <h4>Sign up</h4><br />
-      <form id="signup-form">
-        <div class="form-group">
+      <form id="signup">
+        <div>
           <label for="username">Username:</label>
-        <input type="text" class = "form-control" id="username" placeholder="Enter username" name = "username" >
+        <input type="text" id="username" placeholder="Enter username" name = "username" >
         </div>
-        <div class="form-group">
+        <div>
           <label for="email">Email address:</label>
-          <input type="email" class="form-control" id="email" placeholder="Enter Email" name = "email">
+          <input type="email" id="email" placeholder="Enter Email" name = "email">
         </div>
-        <div class="form-group">
+        <div>
           <label for="password">Password:</label>
-          <input type="password" class = "form-control" id="password" placeholder="Enter Password" name = "password">
+          <input type="password" id="password" placeholder="Enter Password" name = "password">
         </div>
-        <div class="form-group">
+        <div>
           <label for="reEnterPassword">Re-enter password:</label>
-          <input type="password" class = "form-control" id="reEnterPassword" placeholder="Re-enter Password" name = "reEnterPassword">
+          <input type="password" id="reEnterPassword" placeholder="Re-enter Password" name = "reEnterPassword">
         </div>
-        <button type = "submit" class="btn btn-default" id = "createAccount" value = "createAccount">Sign up</button>
+        <button type = "submit" id = "createAccount" value = "createAccount">Sign up</button>
       </form>
     </div>
   </div>
