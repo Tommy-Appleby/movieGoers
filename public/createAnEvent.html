@@ -10,8 +10,14 @@
         text-align: center;
     }
     body{
+      
       background:url(backgroundImage.png);
       background-size: 60%;
+    }
+    .content{
+      color: yellow;
+      font-size: 22px;
+      
     }
 </style>
 <style>
@@ -108,15 +114,17 @@
           </div>
           <div id="success"></div> -->
           <!-- For success/fail messages -->
+          
           <div class = "content" >
             <form id="add-review-form">
+              
               <input type="text" name="movieName" placeholder="Movie name">
               <input type="text" name="releaseDate" placeholder= "Movie release date">
               <input type="text" name="Genre" placeholder="Movie genre">
               <input type="text" name= "Review" placeholder="Movie Review">
               <button>Create Review</button>
             </form>
-            <ul id="review-list"></ul>
+            <ol id="review-list"></ol>
           </div>
 
           <!--<button type="button" class="btn btn-primary" id="createEventBTN"><b>Create Movie Review</b></button>-->
